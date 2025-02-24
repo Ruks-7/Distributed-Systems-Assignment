@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Search Contacts{% endblock %}
+
+{% block content %}
+<div class="search-form">
+  <h2><i class="material-icons">search</i> Search Contacts</h2>
+  <form method="GET">
+    <div class="form-group">
+      <label for="registration_number">
+        <i class="material-icons">fingerprint</i> Registration Number
+      </label>
+      <input type="text" name="registration_number" id="registration_number" placeholder="Enter Registration Number" required>
+    </div>
+    <button type="submit">
+      <i class="material-icons">search</i> Search
+    </button>
+  </form>
+  
+  {% if contact is defined %}
+    {% if contact %}
+      <div class="contact-details">
+        <h3>Contact Details</h3>
+        <p><strong>Mobile:</strong> {{ contact.mobile }}</p>
+        <p><strong>Email:</strong> {{ contact.email }}</p>
+        <p><strong>Address:</strong> {{ contact.address }}</p>
+        <p><strong>Registration Number:</strong> {{ contact.registration_number }}</p>
+      </div>
+    {% else %}
+      <div class="alert alert-error">
+        No contact found with the entered registration number.
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+{% endblock %}

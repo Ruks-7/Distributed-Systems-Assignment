@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Add Contact{% endblock %}
+
+{% block content %}
+<div class="contact-form">
+  <h2><i class="material-icons">person_add</i>Contact Form</h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="mobile"><i class="material-icons">phone</i> Mobile Phone Number</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+    </div>
+    <div class="form-group">
+      <label for="email"><i class="material-icons">email</i> Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    </div>
+    <div class="form-group">
+      <label for="address"><i class="material-icons">home</i> Address</label>
+      <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="registration_number"><i class="material-icons">fingerprint</i> Registration Number</label>
+      <input type="text" id="registration_number" name="registration_number" placeholder="Enter registration number" required>
+    </div>
+    <button type="submit"><i class="material-icons">save</i> Save Contact</button>
+  </form>
+  <a href="{{ url_for('auth.search') }}" class="link-button">
+    <i class="material-icons">search</i> Search Contacts
+  </a>
+</div>
+{% endblock %}
