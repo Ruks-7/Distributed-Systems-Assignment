@@ -1,4 +1,4 @@
-# Flask Contact Management System
+# Flask Contact Management Application
 
 A web application built with Flask and MongoDB for managing contacts with user authentication.
 
@@ -26,21 +26,21 @@ contact-system/
 ├── README.md
 ├── .venv/
 └── app/
-    ├── __init__.py
-    ├── routes/
-    │   ├── __init__.py
-    │   └── auth.py
-    ├── templates/
-    │   ├── base.html
-    │   └── auth/
-    │       ├── login.html
-    │       ├── register.html
-    │       ├── forgot_password.html
-    │       ├── reset_password.html
-    │       ├── contact_form.html
-    │       └── search.html
-    └── static/
-        └── css/
+   ├── __init__.py
+   ├── routes/
+   │   ├── __init__.py
+   │   └── auth.py
+   ├── templates/
+   │   ├── base.html
+   │   └── auth/
+   │       ├── login.html
+   │       ├── register.html
+   │       ├── forgot_password.html
+   │       ├── reset_password.html
+   │       ├── contact_form.html
+   │       └── search.html
+   └── static/
+      └── css/
             └── style.css
 ```
 
