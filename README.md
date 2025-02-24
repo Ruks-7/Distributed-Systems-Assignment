@@ -20,7 +20,7 @@ A web application built with Flask and MongoDB for managing contacts with user a
 ```plaintext
 contact-system/
 ├── run.py
-├──requirements.txt
+├── requirements.txt
 ├── config.py
 ├── .env
 ├── README.md
