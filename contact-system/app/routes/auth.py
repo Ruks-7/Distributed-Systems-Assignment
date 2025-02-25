@@ -3,8 +3,13 @@ from flask_mail import Message
 from app import mongo, mail
 import secrets
 from bson import ObjectId
+from config import Config
 
 bp = Blueprint('auth', __name__)
+
+@bp.route('/')
+def index():
+    return redirect(url_for('auth.login'))
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -66,6 +71,7 @@ def forgot_password():
             reset_url = url_for('auth.reset_password', token=token, _external=True)
             try:
                 msg = Message('Password Reset Request',
+                                sender=Config.MAIL_USERNAME,
                                 recipients=[email],
                                 body=(f"To reset your password, click on the following link:\n\n"
                                     f"{reset_url}\n\n"
