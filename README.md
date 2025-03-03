@@ -39,6 +39,7 @@ contact-system/
    │       ├── reset_password.html
    │       ├── contact_form.html
    │       └── search.html
+   |   └── base.html
    └── static/
       └── css/
             └── style.css
